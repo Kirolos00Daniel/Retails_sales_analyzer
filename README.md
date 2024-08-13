@@ -1,23 +1,40 @@
-# **Retail Sales Analyzer**
+# Retail Sales Analyzer
 
-This Python project provides a comprehensive analysis tool for retail sales data. The RetailSalesAnalyzer class encapsulates methods for loading, cleaning, and analyzing sales data from a CSV file, and includes functionalities to visualize sales trends and performance metrics.
+This Python script provides a simple and effective way to analyze retail sales data using the Pandas and Matplotlib libraries. The script reads sales data from a CSV file, processes it, and provides various insights and visualizations.
 
-## **Features:**
+## Features
 
-### **Data Loading and Cleaning:**
+- **Data Cleaning**: The script removes any missing values from the dataset.
+- **Total Sales Per Product**: Calculates the total sales for each product.
+- **Best Selling Product**: Identifies the best-selling product based on total sales.
+- **Average Daily Sales**: Computes the average daily sales across the dataset.
+- **Sales Trend Visualization**: Plots the sales trend over time.
+- **Sales Per Product Visualization**: Plots the total sales per product in a bar chart.
 
--Automatically loads sales data from a CSV file and handles missing values.
+## Requirements
 
-### **Sales Analysis:**
+- Python 3.x
+- Pandas
+- Matplotlib
 
--Total sales calculation per product.
+You can install the required packages using pip:
 
--Identification of the best-selling product.
+```bash
+pip install pandas matplotlib
+```
+## Usage
 
--Computation of average daily sales.
+1. **Data Preparation**: Ensure you have a CSV file named `retail_sales.csv` with the following columns:
+   - `Date`: The date of the sales (in YYYY-MM-DD format).
+   - `Product`: The name of the product.
+   - `Sales`: The sales amount.
 
-### **Visualization:**
+2. **Running the Script**: Simply run the script to get the analysis results. The script will print out the total sales per product, the best-selling product, and the average daily sales. It will also display two plots: one for the sales trend over time and another for sales per product.
 
--Line plot of sales trends over time.
-
--Bar chart of sales per product.
+```python
+analyzer = RetailSalesAnalyzer()
+print('Total Sales per Product: \n', analyzer.total_sales_per_product())
+print('Best Selling Product: ', analyzer.best_selling_product())
+print('Average Daily Sales: ', analyzer.average_daily_Sales())
+analyzer.plot_sales_per_product()
+analyzer.plot_sales_trend()
