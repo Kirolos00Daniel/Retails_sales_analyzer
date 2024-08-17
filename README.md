@@ -38,3 +38,18 @@ print('Best Selling Product: ', analyzer.best_selling_product())
 print('Average Daily Sales: ', analyzer.average_daily_Sales())
 analyzer.plot_sales_per_product()
 analyzer.plot_sales_trend()
+```
+## Outcomes
+
+### Textual Output:
+- **Total Sales per Product:** Shows the total sales for each product.
+- **Best-Selling Product:** Identifies the product with the highest sales.
+- **Average Daily Sales:** Displays the average daily sales across all dates.
+
+### Visual Output:
+- **Sales Per Product Bar Chart:** Visualizes the sales distribution among products.
+- **Sales Trend Line Chart:** Plots the sales trend over time.
+
+## Conclusion
+This script provides a comprehensive way to analyze retail sales data, from cleaning and processing the data to performing key analyses and visualizations. The class-based structure makes
+
